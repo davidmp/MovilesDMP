@@ -60,6 +60,11 @@ public class MainQRActivity extends AppCompatActivity {
         }
     }
 
+    public  void onListarasitencia(View view){
+        Intent  inte=new Intent();
+        inte.setClass(this,ListarAsistenciaActivity.class);
+        startActivity(inte);
+    }
 
     public void onRegistrar(View view){
         Vistaescaner = new ZXingScannerView(this);

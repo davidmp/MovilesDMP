@@ -51,6 +51,13 @@
                 android:layout_height="wrap_content"
                 android:onClick="onResultado"
                 android:text="Ver registro" />
+
+            <Button
+                android:id="@+id/idBtnListar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onListarasitencia"
+                android:text="Listar Asistencia" />
         </LinearLayout>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
