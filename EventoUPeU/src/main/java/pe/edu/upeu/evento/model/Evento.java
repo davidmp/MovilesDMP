@@ -5,6 +5,7 @@
  */
 package pe.edu.upeu.evento.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
@@ -73,6 +74,7 @@ public class Evento implements Serializable {
     @Column(name = "estado")
     private String estado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEvento")
+    @JsonIgnore
     private Collection<Asistencia> asistenciaCollection;
 
     public Evento() {
