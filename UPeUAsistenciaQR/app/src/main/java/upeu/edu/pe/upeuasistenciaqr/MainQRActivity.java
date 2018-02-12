@@ -60,6 +60,12 @@ public class MainQRActivity extends AppCompatActivity {
         }
     }
 
+    public void onRest(View view){
+        Intent  inte=new Intent();
+        inte.setClass(this,MainRestActivity.class);
+        startActivity(inte);
+    }
+
     public  void onListarasitencia(View view){
         Intent  inte=new Intent();
         inte.setClass(this,ListarAsistenciaActivity.class);

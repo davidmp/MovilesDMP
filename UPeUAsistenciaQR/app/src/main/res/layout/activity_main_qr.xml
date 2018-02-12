@@ -58,6 +58,13 @@
                 android:layout_height="wrap_content"
                 android:onClick="onListarasitencia"
                 android:text="Listar Asistencia" />
+
+            <Button
+                android:id="@+id/IdBtnRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onRest"
+                android:text="REST" />
         </LinearLayout>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
