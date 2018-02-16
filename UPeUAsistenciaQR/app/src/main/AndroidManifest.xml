@@ -22,7 +22,8 @@
         <activity android:name=".MainQRActivity" />
         <activity android:name=".SimpleScannerActivity" />
         <activity android:name=".ListarAsistenciaActivity" />
-        <activity android:name=".MainRestActivity"></activity>
+        <activity android:name=".MainRestActivity" />
+        <activity android:name=".ActivarEventoActivity" android:noHistory="true"></activity>
     </application>
 
 </manifest>

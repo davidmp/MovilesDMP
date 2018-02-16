@@ -2,6 +2,7 @@ package upeu.edu.pe.upeuasistenciaqr;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,6 +44,11 @@ public class MainQRActivity extends AppCompatActivity {
         idUsuario=bu.getInt("idUsuario");
         resultado=(TextView)findViewById(R.id.idResultado);
         resultado.setText(dato);
+        SharedPreferences sp=getSharedPreferences("key", Context.MODE_PRIVATE);
+        SharedPreferences.Editor ed=sp.edit();
+        ed.putInt("value",idUsuario);
+        ed.putString("valNombre", dato);
+        ed.commit();
     }
 
     public void mostrarCamara(){
@@ -79,6 +85,15 @@ public class MainQRActivity extends AppCompatActivity {
         Log.v("DATOS------:",String.valueOf(idUsuario));
         Vistaescaner.startCamera();
     }
+
+    public void onActivarevento(View view){
+        Intent intent=new Intent();
+        //intent.putExtra("idUsuario", idUsuario);
+        intent.setClass(this, ActivarEventoActivity.class);
+        startActivity(intent);
+        //finish();
+    }
+
     public void scanerQR(View view){
         Intent intent=new Intent();
         intent.putExtra("idUsuario", idUsuario);

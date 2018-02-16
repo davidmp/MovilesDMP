@@ -65,6 +65,13 @@
                 android:layout_height="wrap_content"
                 android:onClick="onRest"
                 android:text="REST" />
+
+            <Button
+                android:id="@+id/idBtnActivarEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onActivarevento"
+                android:text="Activar Evento" />
         </LinearLayout>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

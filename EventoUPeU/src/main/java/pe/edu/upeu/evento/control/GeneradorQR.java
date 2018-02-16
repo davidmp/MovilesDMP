@@ -5,6 +5,7 @@
  */
 package pe.edu.upeu.evento.control;
 
+import com.google.zxing.EncodeHintType;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -52,6 +53,7 @@ public class GeneradorQR extends HttpServlet {
         String dato="";
         dato=request.getParameter("codigo");
         ByteArrayOutputStream outx=QRCode.from(dato)
+                                    .withHint(EncodeHintType.MARGIN, 0)
                                     .withSize(250, 250)
                                     .to(ImageType.PNG)
                                     .stream();

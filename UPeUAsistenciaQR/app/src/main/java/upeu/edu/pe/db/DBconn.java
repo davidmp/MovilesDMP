@@ -22,6 +22,8 @@ public class DBconn extends SQLiteOpenHelper {
         db.execSQL(" INSERT INTO usuario VALUES (2,'admin','admin','Dario','Mamani Pari','43631917','mamanipari@gmail.com','1'); ");
         db.execSQL(" CREATE TABLE evento (idEvento INTEGER PRIMARY KEY autoincrement NOT NULL,fecha TEXT NOT NULL,horainicio TEXT NOT NULL,horafin TEXT NOT NULL, nombreevento TEXT NOT NULL,lugarevento TEXT,tiempotolerancia TEXT NOT NULL,estado TEXT NOT NULL); ");
         db.execSQL(" insert into evento(fecha,horainicio,horafin,nombreevento,lugarevento,tiempotolerancia,estado) values(date('now'),strftime('%H','now'),strftime('%H','now'),'Cultura','juliaca',strftime('%H','now'),'1') ");
+        db.execSQL(" insert into evento(fecha,horainicio,horafin,nombreevento,lugarevento,tiempotolerancia,estado) values(date('now'),strftime('%H','now'),strftime('%H','now'),'Simposio','juliaca',strftime('%H','now'),'0') ");
+        db.execSQL(" insert into evento(fecha,horainicio,horafin,nombreevento,lugarevento,tiempotolerancia,estado) values(date('now'),strftime('%H','now'),strftime('%H','now'),'Apertura del Ciclo Academico','juliaca',strftime('%H','now'),'1') ");
         db.execSQL(" CREATE TABLE asistencia (idAsistencia INTEGER PRIMARY KEY autoincrement NOT NULL,idEvento INTEGER REFERENCES evento(idEvento) on delete restrict deferrable initially deferred NOT NULL,idUsuario INTEGER REFERENCES usuario(idUsuario) on delete restrict deferrable initially deferred NOT NULL,codigo TEXT NOT NULL,nombres TEXT NOT NULL,companhia TEXT NOT NULL,fechahora TEXT NOT NULL,ofline TEXT NOT NULL); ");
     }
 

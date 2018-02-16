@@ -5,6 +5,8 @@
  */
 package pe.edu.upeu.evento.control;
 
+import java.util.HashMap;
+import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -32,8 +34,10 @@ public class IndexController {
     
     @RequestMapping(value = {"/index"},method = RequestMethod.GET)
     public ModelAndView paginaPrincipal(ModelMap model){
-        
-        return  new ModelAndView("index");
+        Map<String, Object> modelo=new HashMap<String, Object>();
+        modelo.put("listarUsuario", service.listarEntidad());
+        modelo.put("saludo", "Hola UPeU");
+        return  new ModelAndView("index", modelo);
     }
     
     @RequestMapping(value = { "/","/login"},method = RequestMethod.GET)
