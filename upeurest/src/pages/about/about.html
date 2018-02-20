@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-grid>
+  <ion-row align-items-center>
+      <ion-col col-12>
+          <form id="calculator-form1">
+              <ion-item id="calculator-input1">                  
+                  <ion-input type="text" placeholder="0" name="display" [(ngModel)]="result"></ion-input>
+              </ion-item>
+          </form>  
+      </ion-col>
+  </ion-row>
+
+  <ion-row align-items-center>
+    <ion-col col-3>
+      <button id="btn7" ion-button full color="energized" (click)="btnClickedOperacion('7')"> 7 </button>
+    </ion-col>
+    <ion-col col-3>
+      <button id="btn8" ion-button full color="energized" (click)="btnClickedOperacion('8')"> 8 </button>
+    </ion-col>
+    <ion-col col-3>
+      <button id="btn9" ion-button full color="energized" (click)="btnClickedOperacion('9')"> 9 </button>
+    </ion-col>   
+    <ion-col col-3>
+        <button id="btnDiv" ion-button full color="energized" (click)="btnClickedOperacion('/')"> / </button>
+      </ion-col>   
+  </ion-row>
+  <ion-row align-items-center>
+    <ion-col col-3>
+      <button id="btn4" ion-button full color="energized" (click)="btnClickedOperacion('4')"> 4 </button>
+    </ion-col>
+    <ion-col col-3>
+      <button id="btn5" ion-button full color="energized" (click)="btnClickedOperacion('5')"> 5 </button>
+    </ion-col>
+    <ion-col col-3>
+      <button id="btn6" ion-button full color="energized" (click)="btnClickedOperacion('6')"> 6 </button>
+    </ion-col>   
+    <ion-col col-3>
+        <button id="btnMul" ion-button full color="energized" (click)="btnClickedOperacion('*')"> * </button>
+      </ion-col>   
+  </ion-row>
+  <ion-row align-items-center>
+    <ion-col col-3>
+      <button id="btn1" ion-button full color="energized" (click)="btnClickedOperacion('1')"> 1 </button>
+    </ion-col>
+    <ion-col col-3>
+      <button id="btn2" ion-button full color="energized" (click)="btnClickedOperacion('2')"> 2 </button>
+    </ion-col>
+    <ion-col col-3>
+      <button id="btn3" ion-button full color="energized" (click)="btnClickedOperacion('3')"> 3 </button>
+    </ion-col>   
+    <ion-col col-3>
+        <button id="btnSum" ion-button full color="energized" (click)="btnClickedOperacion('+')"> + </button>
+      </ion-col>   
+  </ion-row>
+  <ion-row align-items-center>
+    <ion-col col-3>
+      <button id="btn0" ion-button full color="energized" (click)="btnClickedOperacion('0')"> 0 </button>
+    </ion-col>
+    <ion-col col-3>
+      <button id="btnPunto" ion-button full color="energized" (click)="btnClickedOperacion('.')"> . </button>
+    </ion-col>
+    <ion-col col-3>
+      <button id="btnIgual" ion-button full color="energized" (click)="btnClickedOperacion('=')"> = </button>
+    </ion-col>   
+    <ion-col col-3>
+        <button id="btnRest" ion-button full color="energized" (click)="btnClickedOperacion('-')"> - </button>
+      </ion-col>   
+  </ion-row>
+  <ion-row>
+    <ion-col col-12><button id="btnBorrar" ion-button full color="danger" (click)="btnClickedOperacion('C')"> Borrar </button> </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
